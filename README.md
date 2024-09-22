@@ -8,6 +8,7 @@ que calcula rutas, modos y ofertas de transporte.
 Tecnologias Utilizadas
 
 -Python (lenguaje de programacion utilizado gracias a su versatilidad y facilidad de sintaxis) 
+
 -PyCharm (IDE utilizado por generar un ambiente muy propicio para Python y el cual contiene Pytest  incluido como package listo para descargar) 
 -Pytest (framework usado en el testing por facilitar una reporteria de cada prueba y en conjunto) 
 -Selenium Webdriver(framework o parte de la Suit de Selenium usado para automatizar pruebas UI en aplicaciones web apoyado mediante drivers para intervenir en navegadores)
