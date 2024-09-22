@@ -54,15 +54,15 @@ Para asegurar efectividad de la automatizacion la variable urban_routes_URL en d
 
 El archivo main.py se utilizo para correr las pruebas. Es un solo caso de prueba con una estructura asi:
 
-- Consta de las importaciones necesarias provenientes principalmente de la libreria Selenium y otros archivos .py
+-Consta de las importaciones necesarias provenientes principalmente de la libreria Selenium y otros archivos .py
 
 -Una funcion llamada retrieve_phone_code para obtener un codigo necesario util en el desarrollo de la prueba
 
 -Una clase llamada UrbanRoutesPage que tiene como objetivo armar pruebas en base a la arquitectura POM para testing
- *Dicha clase tiene como atributos de clase todas aquellas variables las cuales guardan en una tupla los selectores y elementos de dicha pagina web
- *Posteriormente viene los metodos de clase comanzando con el metodo "init" el cual es un constructor que guarda relacion con el driver 
- *El resto de los metodos de clase son interaciones propias de Selenium con los atributos de clase.
- *A continuacion viene la clase TestUrbanRoutes que en si engloba el caso de prueba como tal.
+ - Dicha clase tiene como atributos de clase todas aquellas variables las cuales guardan en una tupla los selectores y elementos de dicha pagina web
+ - Posteriormente viene los metodos de clase comanzando con el metodo "init" el cual es un constructor que guarda relacion con el driver 
+ - El resto de los metodos de clase son interaciones propias de Selenium con los atributos de clase.
+ - A continuacion viene la clase TestUrbanRoutes que en si engloba el caso de prueba como tal.
  Puede observarse que solo tiene metodos de clase y 2 de ellos (setup_class y teardown_class) tienen decoradores. La principal funcion de estos metodos es abrir y cerrar  el navegador en el marco de realizar la prueba completa.
  En medio de los 2 metodos de clase mencionados anteriormente estan como metodos tambien todas aquellas etapas de la prueba donde se haran comprobaciones mediante "asserts"  para desarollar la prueba o el test completo.
 
