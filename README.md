@@ -17,23 +17,23 @@ Tecnologias Utilizadas
 
 Caso de prueba(Validar el pedido de un taxi con ciertas configuraciones)
 
-Ingresar direcciones desde y hacia donde sera el trayecto
+1) Ingresar direcciones desde y hacia donde sera el trayecto
 
-Seleccionar el boton adecuado del taxi
+2) Seleccionar el boton adecuado del taxi
 
-Elegir el modo de viaje
+3) Elegir el modo de viaje
 
-Ingresar el numero de telefono
+4) Ingresar el numero de telefono
 
-Ingresar el metodo de pago mediante tarjeta
+5) Ingresar el metodo de pago mediante tarjeta
 
-Ingresar un comentario para el conductor
+6) Ingresar un comentario para el conductor
 
-Elegir amenidades del viaje
+7) Elegir amenidades del viaje
 
-Elegir comida en el viaje
+8) Elegir comida en el viaje
 
-Solicitar el viaje
+9) Solicitar el viaje
 
 La siguiente descripcion habla de como ejecutar las pruebas en el actual proyecto:
 
