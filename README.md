@@ -72,7 +72,7 @@ El archivo main.py se utilizo para correr las pruebas. Es un solo caso de prueba
  En medio de los 2 metodos de clase mencionados anteriormente estan como metodos tambien todas aquellas etapas de la prueba donde se haran comprobaciones mediante "asserts"  para desarollar la prueba o el test completo.
 
 
-Para ejecutar el programa se debe situar en el main.py  y ejecutar Run (antes de hacer esto solo valida que al lado de todos los metodos de la clase TestUurbanRoutes que comiencen con test.. tengan el simbolo de "play" verde) desde current file. IMAGEN###################### IMAGEN#####################
+Para ejecutar el programa se debe situar en el main.py  y ejecutar Run (antes de hacer esto solo valida que al lado de todos los metodos de la clase TestUurbanRoutes que comiencen con test.. tengan el simbolo de "play" verde) desde current file. 
 
 ![Captura de pantalla 2024-09-22 a la(s) 3 40 09 p m](https://github.com/user-attachments/assets/b9c81c94-a01a-44fc-86b9-aa03c505ae4d)
 
