@@ -38,7 +38,8 @@ CASO DE PRUEBA (Validar el pedido de un taxi con ciertas configuraciones)
 LA SIGUIENTE DESCRIPCION HABLA DE COMO EJECUTAR LAS PRUEBAS EN EL ACTUAL PROYECTO:
 
 Si tienes descargado PyCharm ignora esta instruccion. Si no es el caso entonces descarga la version gratuita de PyCharm y elige la opcion que coincida con tu hardware. Abre la imagen para que veas donde tienes que elegir la version gratuita.
-IMAGEN##################################
+
+![image](https://github.com/user-attachments/assets/ce2a6264-062f-4a2d-b6b7-c141b5fb13df)
 
 Asegurate de descargarlo con las configuraciones recomendadas y de facto. -Extrae el repositorio a travez de git y github -Abre PyCharm y te aparecera una ventana para iniciar un proyecto o abrirlo si ya existe (lo cual es la opcion que vamos a utilizar por que lo extrajiste de Github) -Elige la opcion "open" -Usa el path donde se guardo el repositorio en tu pc y abrelo.
 
@@ -67,6 +68,6 @@ El archivo main.py se utilizo para correr las pruebas. Es un solo caso de prueba
  En medio de los 2 metodos de clase mencionados anteriormente estan como metodos tambien todas aquellas etapas de la prueba donde se haran comprobaciones mediante "asserts"  para desarollar la prueba o el test completo.
 
 
-Para ejecutar el programa se debe situar en el main.py (current file) y ejecutar Run (antes de hacer esto solo valida que al lado de todos los metodos de la clase TestUurbanRoutes que comiencen con test.. tengan el simbolo de "play" verde) IMAGEN#####################
+Para ejecutar el programa se debe situar en el main.py  y ejecutar Run (antes de hacer esto solo valida que al lado de todos los metodos de la clase TestUurbanRoutes que comiencen con test.. tengan el simbolo de "play" verde) desde current file. IMAGEN###################### IMAGEN#####################
 
 Una de las particularidades de Pytest es identificar las funciones que comienzan con test..... asi que las 9 pruebas contenidas en 9 funciones con dicho comienzo son las que deberian ejecutarse por lo tanto obtendras unas reporteria donde 2 casos de prueba fallan y 7 son exitosos. IMAGEN##########################
