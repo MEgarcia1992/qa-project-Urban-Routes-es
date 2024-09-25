@@ -89,12 +89,15 @@ Hasta ahora has aprendido a correr el programa desde el IDE Pycharm pero tambien
 Sigue los siguientes pasos antes de correrlo en la CLI:
 
 1) Instalar Python localmente
+
 ![Captura de pantalla 2024-09-25 a la(s) 10 20 13 a m](https://github.com/user-attachments/assets/cd99d961-641e-436b-9ff1-13b43fe88334)
 
 2) Instalar Selenium
+
 ![Captura de pantalla 2024-09-25 a la(s) 10 31 01 a m](https://github.com/user-attachments/assets/38199517-f5aa-4ec5-be24-57e7823306f8)
 
 3) Instala Pytest
+
 ![Captura de pantalla 2024-09-25 a la(s) 10 42 04 a m](https://github.com/user-attachments/assets/68196abc-e8c5-47ad-8195-a4302704d55f)
 
 Por lo tanto ya podrias correr el archivo que nos interesa en la CLI pero antes de correrlo ten en cuenta lo siguiente:
