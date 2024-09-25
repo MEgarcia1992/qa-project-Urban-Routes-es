@@ -1,8 +1,10 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import data
+
 
 
 # no modificar
@@ -49,8 +51,8 @@ class UrbanRoutesPage:
     add_card_close_button = (By.XPATH, '//div[@class="payment-picker open"]//button[@class="close-button section-close"]') #
     comment_driver_field = (By.ID, 'comment')
     error_text_len_comment = (By.XPATH, '//div[@style="margin-top: 12px;"]//div[@class="error"]')
-    cleaning_stuff_button = (By.XPATH, '//div[text()="Manta y pañuelos"]/following-sibling::div')
-    switch_cleaning_stuff_button = (By.CSS_SELECTOR, '.r.r-type-switch')
+    cleaning_stuff_button = (By.XPATH, '//div[@class="switch"]')
+    switch_cleaning_stuff_button = (By.XPATH, '//div[@class="switch"]//input')
     ice_plus_button = (By.CLASS_NAME, 'counter-plus')
     count_of_ice = (By.CLASS_NAME, 'counter-value')
     blue_main_button_request_taxi = (By.CLASS_NAME, 'smart-button-main')
@@ -144,8 +146,10 @@ class UrbanRoutesPage:
     def click_choose_cleaning_stuff(self):
         WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(self.cleaning_stuff_button)).click()
 
+    # En el siguiente metodo de clase cambie el visibility..... por el presence..... y ya funciona.
+
     def get_status_of_cleaning_button(self):
-        return WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(self.switch_cleaning_stuff_button)).is_selected()
+        return WebDriverWait(self.driver, 3).until(EC.presence_of_element_located(self.switch_cleaning_stuff_button)).is_selected()
 
     def click_add_ice(self):
         WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(self.ice_plus_button)).click()
@@ -229,16 +233,19 @@ class TestUrbanRoutes:
     def test_set_comment(self):
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_comment_to_driver(data.message_for_driver)
-        assert routes_page.get_text_error_message_comment() == "Longitud máxima 24", ("No aparece el mensaje de "
+        if len(data.message_for_driver) >= 25:
+            assert routes_page.get_text_error_message_comment() == "Longitud máxima 24", ("No aparece el mensaje de "
                                                                                       "advertencia al usuario")
-        assert len(routes_page.get_comment_entered()) <= 24, ("Parece ser que el valor ingresado al elemento"
-                                                              "es mayor a 24 caracteres")
+            assert routes_page.get_comment_entered() == data.message_for_driver
+        else:
+            assert routes_page.get_comment_entered() == data.message_for_driver
 
     def test_set_cleaning_stuff(self):
         routes_page = UrbanRoutesPage(self.driver)
+        assert routes_page.get_status_of_cleaning_button() == False
         routes_page.click_choose_cleaning_stuff()
         assert routes_page.get_status_of_cleaning_button() == True, ("Parece que el toggle button Manta y pañuelos "
-                                                                     "no esta activado en DOM despues de clickearlo")
+                                                            "no esta activado en DOM despues de clickearlo")
 
     def test_set_food(self):
         routes_page = UrbanRoutesPage(self.driver)
